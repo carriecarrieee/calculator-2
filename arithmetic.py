@@ -14,13 +14,13 @@ def divide(num1, num2):
     """Return the quotient of two numbers as a float"""
     return float(num1) / num2
 
-def square(num1, num2 = 1):
+def square(num):
     """Return the square of a number"""
-    return num1 ** 2
+    return num ** 2
 
-def cube(num1, num2 = 1):
+def cube(num):
     """Return the cube of a number"""
-    return num1 ** 3
+    return num ** 3
 
 def power(num, exponent):
     """Return num raised to the power of exponent"""

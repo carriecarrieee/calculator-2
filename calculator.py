@@ -10,15 +10,15 @@ from arithmetic import *
 # Your code goes here
 while True:
     new_input = raw_input("> ")
-
     if new_input == "q":
         break
-
     tokens = new_input.split(" ")
     operator = tokens[0]
     first_number = int(tokens[1])
-    sec_number = int(tokens[2])
-
+    if len(tokens) == 3:
+        sec_number = int(tokens[2])
+    else:
+        sec_number = 1
     if operator == "+":
         print add(first_number, sec_number)
     elif operator == "-":
@@ -28,13 +28,12 @@ while True:
     elif operator == "/":
         print divide(first_number, sec_number)
     elif operator == "square":
-        print square(first_number, sec_number)
+        print square(first_number)
     elif operator == "cube":
-        print cube(first_number, sec_number)
+        print cube(first_number)
     elif operator == "pow":
         print power(first_number, sec_number)
     elif operator == "mod":
         print mod(first_number, sec_number)
     else:
         print "Invalid entry, please try again."
-
