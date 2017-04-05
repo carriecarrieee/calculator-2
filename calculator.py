@@ -17,8 +17,6 @@ while True:
     first_number = int(tokens[1])
     if len(tokens) == 3:
         sec_number = int(tokens[2])
-    else:
-        sec_number = 1
     if operator == "+":
         print add(first_number, sec_number)
     elif operator == "-":
