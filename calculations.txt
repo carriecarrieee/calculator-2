@@ -1,0 +1,7 @@
++ 2 3
+pow 2 2 3
+pow 1 2 3
+pow 3 2
+- 10 5
+cube 2
+square 4
