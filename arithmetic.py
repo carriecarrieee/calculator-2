@@ -7,22 +7,22 @@ def add(num_list):
 
 def subtract(num_list):
     """Return the difference of two numbers"""
-    total = 2*int(num_list[0])
-    for item in num_list:
+    total = int(num_list[0])
+    for item in num_list[1:]:
         total -= int(item)
     return total
 
 def multiply(num_list):
     """Return the product of two numbers"""
-    total = 1
-    for item in num_list:
+    total = int(num_list[0])
+    for item in num_list[1:]:
         total *= int(item)
     return total
 
 def divide(num_list):
     """Return the quotient of two numbers as a float"""
-    total = float(num_list[0])**2
-    for item in num_list:
+    total = float(num_list[0])
+    for item in num_list[1:]:
         total /= float(item)
     return total
 
@@ -36,7 +36,10 @@ def cube(num_list):
 
 def power(num_list):
     """Return num raised to the power of exponent"""
-    return int(num_list[0]) ** int(num_list[1])
+    total = int(num_list[0])
+    for item in num_list[1:]:
+        total = total ** int(item)
+    return total
 
 def mod(num_list):
     """Return remainder of num1 divided by num2"""

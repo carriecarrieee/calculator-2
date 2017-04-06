@@ -6,34 +6,34 @@ calculator program yourself in this file.
 
 from arithmetic import *
 
+calc_file = open("calculations.txt")
+    
 
-# Your code goes here
-while True:
-    new_input = raw_input("> ")
-    if new_input == "q":
-        break
+for each_command in calc_file:        # loop through lines of commands
+    each_command = each_command.rstrip()
+    print each_command
 
-    try:
-        tokens = new_input.split(" ")
+    try:          # if user enters invalid entry or errors, will print except statement
+        tokens = each_command.split(" ")
         operator = tokens[0]
-        num_list = tokens[1:len(tokens)]
+        num_list = tokens[1:]
         if operator == "+":
-            print "%.2f" % add(num_list)
+            print "%.2f\n" % add(num_list)
         elif operator == "-":
-            print "%.2f" % subtract(num_list)
+            print "%.2f\n" % subtract(num_list)
         elif operator == "*":
-            print "%.2f" % multiply(num_list)
+            print "%.2f\n" % multiply(num_list)
         elif operator == "/":
-            print "%.2f" % divide(num_list)
+            print "%.2f\n" % divide(num_list)
         elif operator == "square":
-            print "%.2f" % square(num_list)
+            print "%.2f\n" % square(num_list)
         elif operator == "cube":
-            print "%.2f" % cube(num_list)
+            print "%.2f\n" % cube(num_list)
         elif operator == "pow":
-            print "%.2f" % power(num_list)
+            print "%.2f\n" % power(num_list)
         elif operator == "mod":
-            print "%.2f" % mod(num_list)
+            print "%.2f\n" % mod(num_list)
         else:
-            print "Invalid entry, please try again."
+            print "Invalid entry, please try again!"
     except:
         print "Invalid entry, please try again."
