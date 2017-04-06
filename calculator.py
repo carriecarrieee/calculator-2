@@ -33,5 +33,7 @@ while True:
             print power(num_list)
         elif operator == "mod":
             print mod(num_list)
+        else:
+            print "Invalid entry, please try again."
     except:
         print "Invalid entry, please try again."
