@@ -1,7 +1,8 @@
-+ 2 3
-pow 2 2 3
-pow 1 2 3
-pow 3 2
-- 10 5
-cube 2
-square 4
+3 + 4
+5 - 2
+4 * 3
+10 / 2
+4 square
+2 cube
+3 pow 2
+5 mod 4

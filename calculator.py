@@ -15,8 +15,8 @@ for each_command in calc_file:        # loop through lines of commands
 
     try:          # if user enters invalid entry or errors, will print except statement
         tokens = each_command.split(" ")
-        operator = tokens[0]
-        num_list = tokens[1:]
+        operator = tokens[1]
+        num_list = tokens[::2]
         if operator == "+":
             print "%.2f\n" % add(num_list)
         elif operator == "-":
