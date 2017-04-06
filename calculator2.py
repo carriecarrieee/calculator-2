@@ -4,8 +4,6 @@ Using the arithmetic.py file from Calculator Part 1, create the
 calculator program yourself in this file.
 """
 
-from arithmetic2 import *
-
 calc_file = open("calculations.txt")
     
 
@@ -18,21 +16,21 @@ for each_command in calc_file:        # loop through lines of commands
         operator = tokens[1]
         num_list = tokens[::2]
         if operator == "+":
-            print "%.2f\n" % add(num_list)
+            print "%.2f\n" % reduce(lambda x, y: int(x) + int(y), num_list)
         elif operator == "-":
-            print "%.2f\n" % subtract(num_list)
+            print "%.2f\n" % reduce(lambda x, y: int(x) - int(y), num_list)
         elif operator == "*":
-            print "%.2f\n" % multiply(num_list)
+            print "%.2f\n" % reduce(lambda x, y: int(x) * int(y), num_list)
         elif operator == "/":
-            print "%.2f\n" % divide(num_list)
+            print "%.2f\n" % reduce(lambda x, y: int(x) / int(y), num_list)
         elif operator == "square":
-            print "%.2f\n" % square(num_list)
+            print "%.2f\n" % reduce(lambda x: int(x) ** 2, num_list[0])
         elif operator == "cube":
-            print "%.2f\n" % cube(num_list)
+            print "%.2f\n" % reduce(lambda x: int(x) ** 3, num_list[0])
         elif operator == "pow":
-            print "%.2f\n" % power(num_list)
+            print "%.2f\n" % reduce(lambda x, y: int(x)**int(y), num_list)
         elif operator == "mod":
-            print "%.2f\n" % mod(num_list)
+            print "%.2f\n" % reduce(lambda x, y: int(x) % int(y), num_list)
         else:
             print "Invalid entry, please try again!"
     except:
