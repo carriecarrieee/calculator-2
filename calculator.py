@@ -14,24 +14,22 @@ while True:
         break
     tokens = new_input.split(" ")
     operator = tokens[0]
-    first_number = int(tokens[1])
-    if len(tokens) == 3:
-        sec_number = int(tokens[2])
+    num_list = tokens[1:len(tokens)]
     if operator == "+":
-        print add(first_number, sec_number)
+        print add(num_list)
     elif operator == "-":
-        print subtract(first_number, sec_number)
+        print subtract(num_list)
     elif operator == "*":
-        print multiply(first_number, sec_number)
+        print multiply(num_list)
     elif operator == "/":
-        print divide(first_number, sec_number)
+        print divide(num_list)
     elif operator == "square":
-        print square(first_number)
+        print square(num_list)
     elif operator == "cube":
-        print cube(first_number)
+        print cube(num_list)
     elif operator == "pow":
-        print power(first_number, sec_number)
+        print power(num_list)
     elif operator == "mod":
-        print mod(first_number, sec_number)
+        print mod(num_list)
     else:
         print "Invalid entry, please try again."

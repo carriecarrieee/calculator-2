@@ -1,31 +1,43 @@
-def add(num1, num2):
+def add(num_list):
     """Return the sum of two numbers"""
-    return num1 + num2
+    total = 0
+    for item in num_list:
+        total += int(item)
+    return total
 
-def subtract(num1, num2):
+def subtract(num_list):
     """Return the difference of two numbers"""
-    return num1 - num2
+    total = 2*int(num_list[0])
+    for item in num_list:
+        total -= int(item)
+    return total
 
-def multiply(num1, num2):
+def multiply(num_list):
     """Return the product of two numbers"""
-    return num1 * num2
+    total = 1
+    for item in num_list:
+        total *= int(item)
+    return total
 
-def divide(num1, num2):
+def divide(num_list):
     """Return the quotient of two numbers as a float"""
-    return float(num1) / num2
+    total = float(num_list[0])**2
+    for item in num_list:
+        total /= float(item)
+    return total
 
-def square(num):
+def square(num_list):
     """Return the square of a number"""
-    return num ** 2
+    return int(num_list[0]) ** 2
 
-def cube(num):
+def cube(num_list):
     """Return the cube of a number"""
-    return num ** 3
+    return int(num_list[0]) ** 3
 
-def power(num, exponent):
+def power(num_list):
     """Return num raised to the power of exponent"""
-    return num ** exponent
+    return int(num_list[0]) ** int(num_list[1])
 
-def mod(num1, num2):
+def mod(num_list):
     """Return remainder of num1 divided by num2"""
-    return num1 % num2
+    return int(num_list[0]) % int(num_list[1])
